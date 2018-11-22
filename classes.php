@@ -12,7 +12,16 @@ abstract class User {
 
 }
 
+Class Director extends User {
 
+    function getFullname(){
+        return $this->fullname;
+    }
+
+    function getAccessRights(){
+        return $this->accessRights;
+    }
+}
 
 
 /*
