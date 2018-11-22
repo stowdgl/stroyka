@@ -1,23 +1,21 @@
 <?php
 
-class User{
-    public $fullname;
+abstract class User {
+
+	public $fullname;
+
+	public $accessRights;
+
+	abstract public function getFullname();
+	
+	abstract public function getAccessRights();
 
 }
 
 
 
 
-
-
-
-
-
-
-
-
-/*<!--User:
-
+/*
 	Director
 
 	Stockman
@@ -50,4 +48,5 @@ Instrument
 
 Material
 
-Mechanizm-->*/*/*/
+Mechanizm
+
