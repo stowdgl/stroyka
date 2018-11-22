@@ -14,12 +14,26 @@ abstract class User {
 
 Class Director extends User {
 
+    function __construct($name,$accessRights)
+    {
+        $this->fullname = $name;
+        $this->accessRights = $accessRights;
+    }
+
     function getFullname(){
         return $this->fullname;
     }
 
     function getAccessRights(){
         return $this->accessRights;
+    }
+
+    function setFullname($name){
+        $this->fullname = $name;
+    }
+
+    function setAccessRights(array $rights){
+        $this->accessRights = $rights;
     }
 }
 
