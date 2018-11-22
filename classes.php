@@ -1,4 +1,22 @@
-User:
+<?php
+
+class User{
+    public $fullname;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*<!--User:
 
 	Director
 
@@ -13,27 +31,23 @@ User:
 	Driver
 
 Order
-
-Orderline
+/*
+/*Orderline
 
 Transaction
 
 Transactionline
 
-
-
-
-
 Object
 
-Storage
+Storage*/
 
-Subject:
+/*Subject:*/
 
-Type
+/*Type
 
 Instrument
 
 Material
 
-Mechanizm
+Mechanizm-->*/*/*/
