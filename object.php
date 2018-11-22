@@ -6,4 +6,6 @@ abstract class Object
     public $owner;
     abstract function getAddress();
     abstract function getPeoples();
+    abstract function getBudget();
+    abstract function getSpendMoney();
 }
