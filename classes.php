@@ -3,8 +3,13 @@
 class User {
 
     public $fullname, $acceccRights;
-    abstract public function ();
+
+	abstract public function getFullname();
+	
+	abstract public function getAccessRights();
+
 }
+
 
 /*
 	Director
@@ -44,4 +49,9 @@ Instrument
 Material
 
 Mechanizm
+<<<<<<< HEAD
 /*
+=======
+
+*/
+>>>>>>> c5ddb8425833ef5cd0c7af7f72364645bc20fea9
