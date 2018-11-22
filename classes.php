@@ -14,7 +14,6 @@ abstract class User {
 
 Class Director extends User {
 
-<<<<<<< HEAD
     function __construct($name,$accessRights)
     {
         $this->fullname = $name;
@@ -38,9 +37,6 @@ Class Director extends User {
     }
 }
 
-
-=======
->>>>>>> 6b030cf15cc64c64ee0e1838b934e3e0651fdc70
 /*
 	Director
 
