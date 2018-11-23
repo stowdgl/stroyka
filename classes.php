@@ -1,10 +1,8 @@
 <?php
 
-abstract class User {
+class User {
 
-	public $fullname;
-
-	public $accessRights;
+    public $fullname, $acceccRights;
 
 	abstract public function getFullname();
 	
@@ -51,5 +49,9 @@ Instrument
 Material
 
 Mechanizm
+<<<<<<< HEAD
+/*
+=======
 
 */
+>>>>>>> c5ddb8425833ef5cd0c7af7f72364645bc20fea9
