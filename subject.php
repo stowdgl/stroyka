@@ -12,5 +12,5 @@ class Material extends Subject{
 }
 
 class Instrument extends Subject {
-    public
+    public $
 }
