@@ -11,6 +11,6 @@ class Material extends Subject{
     }
 }
 
-class Instrunent extends Subject {
+class Instrument extends Subject {
 
 }
