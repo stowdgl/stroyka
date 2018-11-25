@@ -10,3 +10,7 @@ class Material extends Subject{
         echo $this->valueR;
     }
 }
+
+class Instrunent extends Subject {
+
+}
