@@ -16,42 +16,42 @@ abstract class User {
 
 
 /*
-	Director
+	Director Sergey
 
-	Stockman
+	Stockman Nikolay
 
-	Supplier
+	Supplier Karina
 
-	TeamLead
+	TeamLead Vlasta
 
-	Worker (types)
+	Worker (types) Pasha
 
-	Driver
+	Driver Nikolay
 
-Order
+Order Alexandr
 
-Orderline
+Orderline Vlad
 
-Transaction
+Transaction Sasha
 
-Transactionline
-
-
+Transactionline Haritonoff
 
 
 
-Object
 
-Storage
 
-Subject:
+Object Max
 
-Type
+Storage Max
 
-Instrument
+Subject: Maxim
 
-Material
+Type Dmitry
 
-Mechanizm
+Instrument Denis
+
+Material Gleb
+
+Mechanizm  Maxim
 
 */
