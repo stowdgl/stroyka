@@ -73,9 +73,4 @@ Instrument
 Material
 
 Mechanizm
-<<<<<<< HEAD
-/*
-=======
 
-*/
->>>>>>> c5ddb8425833ef5cd0c7af7f72364645bc20fea9
