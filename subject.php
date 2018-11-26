@@ -19,3 +19,19 @@ class Material extends Subject{
         echo $this->valueR;
     }
 }
+
+class Instrument extends Subject{
+    public $quantity;
+
+    function __construct($quantity){
+        $this->quantity = $quantity;
+    }
+
+    function getQuantity(){
+        return $this->quantity;
+    }
+
+    function setQuantity($quantity){
+        return $this->quantity = $quantity;
+    }
+}
