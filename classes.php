@@ -1,57 +1,125 @@
 <?php
 
-abstract class User {
+interface FullName
+{
+    public function getFullName();
+}
 
-	public $fullname;
+interface FullNameAccess extends FullName
+{
+    public function getAccessRights();
+}
 
-	public $accessRights;
+abstract class User
+{
+    public $fullName, $accessRights;
+}
 
-	abstract public function getFullname();
-	
-	abstract public function getAccessRights();
+class Supplier extends User implements FullNameAccess
+{
+    protected $order;
 
+    public function getFullName()
+    {
+        return $this->fullName . "\n";
+    }
+
+    public function getAccessRights()
+    {
+        $access = ["director" => "all", "supplier" => "only orders", "worker" => "without access"];
+        foreach ($access as $key => $value) {
+            echo $access[ "supplier" ];
+        }
+    }
+
+    function do_order($order)
+    {
+        $this->order = $order; //with Vlasta?
+    }
+}
+
+Class Director extends User
+{
+
+    function __construct($name, array $accessRights)
+    {
+        $this->fullName     = $name;
+        $this->accessRights = $accessRights;
+    }
+
+    public function getFullName()
+    {
+        return $this->fullName;
+    }
+
+    public function getAccessRights()
+    {
+        return $this->accessRights;
+    }
+
+    public function setFullName($name)
+    {
+        if (gettype($name) === 'string') {
+            $this->fullName = $name;
+        }
+    }
+
+    public function setAccessRights(array $rights)
+    {
+        $this->accessRights = $rights;
+    }
+}
+
+$director = new Director('Like A Boss', ['director']);
+$supplier = new Supplier();
+$supplier->fullName = 'Nikita';
+$supplier->accessRights = 'supplier';
+
+$persons[] = $director;
+$persons[] = $supplier;
+
+foreach ($persons as $person)
+{
+    echo $person->getFullName().PHP_EOL;
 }
 
 
-
-
 /*
-	Director
+	Director Sergey
 
-	Stockman
+	Stockman Nikolay
 
-	Supplier
+	Supplier Karina
 
-	TeamLead
+	TeamLead Vlasta
 
-	Worker (types)
+	Worker (types) Pasha
 
-	Driver
+	Driver Nikolay
 
-Order
+Order Alexandr
 
-Orderline
+Orderline Vlad
 
-Transaction
+Transaction Sasha
 
-Transactionline
-
-
+Transactionline Haritonoff
 
 
 
-Object
 
-Storage
 
-Subject:
+Object Max
 
-Type
+Storage Max
 
-Instrument
+Subject: Maxim
 
-Material
+Type Dmitry
 
-Mechanizm
+Instrument Denis
 
-*/
+Material Gleb
+
+Mechanizm  Maxim
+
