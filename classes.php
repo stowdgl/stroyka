@@ -7,9 +7,9 @@ abstract class User
 
     public $accessRights;
 
-//    abstract public function getFullName();
+    abstract public function getFullName();
 
-//    abstract public function getAccessRights();
+    abstract public function getAccessRights();
 }
 
 
@@ -26,16 +26,15 @@ class TeamLead extends User
         $this->accessRights = $accessRights;
     }
 
-    function getFullName()
+    public function getFullName()
     {
         return $this->name . '' . $this->surName;
     }
 
-    function getAccessRights()
+    public function getAccessRights()
     {
         return $this->accessRights;
     }
-
 }
 
 
@@ -46,6 +45,7 @@ interface FullNameAccess
 
 class Supplier extends User
 {
+    protected $age = 10;
     function __construct($name, $accessRights = User::WORKER)
     {
         $this->fullName     = $name;
@@ -67,6 +67,16 @@ class Supplier extends User
             return $this->$varName . PHP_EOL;
         }
     }
+
+    public function getFullName()
+    {
+        // TODO Дописать метод getFullName, потому что он абстрактный
+    }
+
+    public function getAccessRights()
+    {
+        // TODO Дописать метод getFullName, потому что он абстрактный
+    }
 }
 
 Class Director extends User
@@ -83,7 +93,15 @@ Class Director extends User
     /*
      * GET
      */
+    public function getFullName()
+    {
+        // TODO Дописать метод getFullName, потому что он абстрактный
+    }
 
+    public function getAccessRights()
+    {
+        // TODO Дописать метод getFullName, потому что он абстрактный
+    }
 }
 
 $supplier = new Supplier('Nikita', 'supplier');
@@ -92,9 +110,11 @@ print $supplier->getAge();
 
 $persons[] = $supplier;
 
+/*
 foreach ($persons as $person) {
     echo $person->fullName;
 }
+*/
 
 
 /*
