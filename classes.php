@@ -1,18 +1,50 @@
 <?php
 
-interface FullName
+abstract class User
 {
-    CONST DIRECTOR = 'all';
-    CONST SUPPLIER = 'only orders';
-    CONST WORKER   = 'without access';
+
+    public $fullName;
+
+    public $accessRights;
+
+//    abstract public function getFullName();
+
+//    abstract public function getAccessRights();
 }
 
-interface FullNameAccess extends FullName
+
+class TeamLead extends User
+{
+    public $accessRights;
+    public $name;
+    public $surName;
+
+    public function __construct($name, $surname, $accessRights)
+    {
+        $this->name         = $name;
+        $this->surName      = $surname;
+        $this->accessRights = $accessRights;
+    }
+
+    function getFullName()
+    {
+        return $this->name . '' . $this->surName;
+    }
+
+    function getAccessRights()
+    {
+        return $this->accessRights;
+    }
+
+}
+
+
+interface FullNameAccess
 {
 //    public function getAccessRights();
 }
 
-abstract class User implements FullNameAccess
+class Supplier extends User
 {
     function __construct($name, $accessRights = User::WORKER)
     {
@@ -37,29 +69,6 @@ abstract class User implements FullNameAccess
     }
 }
 
-class Supplier extends User implements FullNameAccess
-{
-    protected $order, $age = 10;
-
-    public function getFullName()
-    {
-        return $this->fullName . "\n";
-    }
-
-    public function getAccessRights()
-    {
-        // TODO $access нету
-        foreach ($access as $key => $value) {
-            echo $access[ "supplier" ];
-        }
-    }
-
-    function do_order($order)
-    {
-        $this->order = $order; //with Vlasta?
-    }
-}
-
 Class Director extends User
 {
     /*
@@ -74,14 +83,13 @@ Class Director extends User
     /*
      * GET
      */
+
 }
 
-$director = new Director('Like A Boss', ['director']);
 $supplier = new Supplier('Nikita', 'supplier');
 
 print $supplier->getAge();
 
-$persons[] = $director;
 $persons[] = $supplier;
 
 foreach ($persons as $person) {
@@ -90,38 +98,41 @@ foreach ($persons as $person) {
 
 
 /*
-	Director
+	Director Sergey
 
-	Stockman
+	Stockman Nikolay
 
-	Supplier
+	Supplier Karina
 
-	TeamLead
+	TeamLead Vlasta
 
-	Worker (types)
+	Worker (types) Pasha
 
-	Driver
+	Driver Nikolay
 
-Order
-/*
-/*Orderline
+Order Alexandr
 
-Transaction
+Orderline Vlad
 
-Transactionline
+Transaction Sasha
 
-Object
+Transactionline Haritonoff
 
-Storage*/
 
-/*Subject:*/
 
-/*Type
 
-Instrument
 
-Material
+Object Max
 
-Mechanizm
+Storage Max
+
+Subject: Maxim
+
+Type Dmitry
+
+Instrument Denis
+
+Material Gleb
+
 */
 
